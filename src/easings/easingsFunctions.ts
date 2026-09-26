@@ -107,7 +107,7 @@ const easingsFunctions: EasingDictionary = {
 		return c3 * x * x * x - c1 * x * x;
 	},
 	easeOutBack: function (x) {
-		return 1 + c3 * pow(x - 1, 3) + c1 * pow(x - 1, 2);
+		return x === 0 ? 0 : 1 + c3 * pow(x - 1, 3) + c1 * pow(x - 1, 2);
 	},
 	easeInOutBack: function (x) {
 		return x < 0.5
